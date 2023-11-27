@@ -1,0 +1,11 @@
+# Use root/example as user/password credentials
+version: '3.4'
+
+services:
+  back:
+    image: localhost:18044/workshop/workshop-devops:0.0.1
+    container_name: workshop-devops
+    ports:
+      - "8000:8080"
+    #volumes:
+    #  - ${WORKSPACE}/sources/src/main/resources/application.properties:/code/config/application.properties
