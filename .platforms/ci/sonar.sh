@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# ./platforms/ci/sonar.sh
-source platforms/bootstrap.sh
+# ./.platforms/ci/sonar.sh
+source .platforms/bootstrap.sh
 
 # Lancer une conteneur qui va analyser le code du projet localement et ensuite envoyer les résultats au serveur SonarQube
 SONAR_IMAGE_EXTRA_OPTS="-v ${WORKSPACE}/sources:${WORKDIR} -v /etc/hosts:/etc/hosts"

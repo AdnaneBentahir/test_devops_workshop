@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # cd workspace
-# ./platforms/k8s/deploy.sh prod
+# ./.platforms/k8s/deploy.sh prod
 
 DEPLOY_TO="local"
 NAMESPACE="workshop"
@@ -21,4 +21,4 @@ NAMESPACE="workshop"
 kubectl create namespace $NAMESPACE --dry-run=client -o yaml | kubectl apply -f -
 
 # Installation / upgrade
-helm upgrade --recreate-pods --install --debug --namespace $NAMESPACE "workshop-devops-${DEPLOY_TO}" -f ./platforms/k8s/helm/values-$DEPLOY_TO.yaml ./platforms/k8s/helm
+helm upgrade --recreate-pods --install --debug --namespace $NAMESPACE "workshop-devops-${DEPLOY_TO}" -f ./.platforms/k8s/helm/values-$DEPLOY_TO.yaml ./.platforms/k8s/helm

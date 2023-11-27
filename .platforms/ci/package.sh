@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# ./platforms/ci/package.sh --with-push
-source platforms/bootstrap.sh
+# ./.platforms/ci/package.sh --with-push
+source .platforms/bootstrap.sh
 source .env
 
 # Registry Docker
 DOCKER_REGISTRY="localhost:18044"
 
 # Package Back Office Docker Image
-docker build -t workshop-devops -f "platforms/ci/dockerfiles/Dockerfile-App" .
+docker build -t workshop-devops -f ".platforms/ci/dockerfiles/Dockerfile-App" .
 docker tag workshop-devops "${DOCKER_REGISTRY}/workshop/workshop-devops:${PROJECT_VERSION}"
 
 # Push Docker Image

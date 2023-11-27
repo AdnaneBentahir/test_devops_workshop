@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# ./platforms/ci/zap.sh
-source ./platforms/bootstrap.sh
+# ./.platforms/ci/zap.sh
+source ./.platforms/bootstrap.sh
 
 SITE_URL="http://10.35.140.22:8000/api/"
 

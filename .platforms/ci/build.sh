@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # cd workspace
-# ./platforms/ci/build.sh
-source platforms/bootstrap.sh
+# ./.platforms/ci/build.sh
+source .platforms/bootstrap.sh
 
 # Compilation
 DOCKER_EXTRA_OPTS="-v ${WORKSPACE}/sources:/code -v $USER_HOME/.m2:/root/.m2"

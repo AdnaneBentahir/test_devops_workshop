@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # cd workspace
-# ./platforms/k8s/undeploy.sh prod
+# ./.platforms/k8s/undeploy.sh prod
 
 DEPLOY_TO="local"
 NAMESPACE="workshop"

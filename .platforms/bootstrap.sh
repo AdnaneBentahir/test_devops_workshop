@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Fonctions / Variables transverses
-source platforms/bootstrap-commons.sh
+source .platforms/bootstrap-commons.sh
 
 ##########################################################################
 # Variables

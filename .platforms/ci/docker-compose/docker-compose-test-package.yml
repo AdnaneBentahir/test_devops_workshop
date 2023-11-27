@@ -18,8 +18,8 @@ services:
     volumes:
       - ${WORKSPACE}/_volumes/mariadb:/var/lib/mysql:rw
     environment:
-      MARIADB_USER: workshop
-      MARIADB_PASSWORD: workshop
+      MARIADB_USER: admin
+      MARIADB_PASSWORD: admin
       MARIADB_DATABASE: workshop
       MARIADB_ROOT_PASSWORD: admin
 

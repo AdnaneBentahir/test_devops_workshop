@@ -25,23 +25,23 @@ node() {
 
         stage("Build") {
             println "Building project"
-            sh "bash ./platforms/ci/build.sh"
+            sh "bash ./.platforms/ci/build.sh"
         }
 
 //        stage("Sonarqube") {
 //            println "Qualimetry Sonarqube"
-//            sh "bash ./platforms/ci/sonar.sh"
+//            sh "bash ./.platforms/ci/sonar.sh"
 //        }
 
         stage("Package") {
             // DockerService.instance().login(DockerRegistry.getDefaultRegistry())
             println "Creating Docker Images"
-            sh "bash ./platforms/ci/package.sh"
+            sh "bash ./.platforms/ci/package.sh"
         }
 
 //        stage("Deploy") {
 //            println "Deploy project"
-//            sh "bash ./platforms/k8s/deploy.sh ${deployTo}"
+//            sh "bash ./.platforms/k8s/deploy.sh ${deployTo}"
 //        }
 
         // Notification (Teams, Mattermost, etc)
