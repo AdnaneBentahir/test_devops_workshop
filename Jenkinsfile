@@ -18,7 +18,7 @@ node() {
             currentBuild.description = "Deploy ${projetcName}"
             checkout scm
             // Mise à jour des droits
-            sh("chmod 777 -R platforms")
+            sh("chmod 777 -R ./.platforms")
             // Mise à jour de la variable "PROJECT_VERSION" dans le fichier ".env"
             //sh('sed -ir \"s/^[#]*\\s*PROJECT_VERSION=.*/PROJECT_VERSION=' + version + '/\" .env')
         }

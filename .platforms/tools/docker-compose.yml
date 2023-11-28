@@ -1,15 +1,15 @@
 version: '3.4'
 
 services:
-  nexus:
-    image: sonatype/nexus3:3.62.0
-    container_name: nexus
-    volumes:
-      - /opt/workshop/nexus/nexus-data:/nexus-data
-    ports:
-      - "8081:8081"
-      - "18044:18044"
-      - "18444:18444"
+#  nexus:
+#    image: sonatype/nexus3:3.62.0
+#    container_name: nexus
+#    volumes:
+#      - /opt/workshop/nexus/nexus-data:/nexus-data
+#    ports:
+#      - "8081:8081"
+#      - "18044:18044"
+#      - "18444:18444"
 
   jenkins:
     image: jenkins/jenkins:2.433-jdk17
