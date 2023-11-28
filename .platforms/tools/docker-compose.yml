@@ -12,7 +12,9 @@ services:
 #      - "18444:18444"
 
   jenkins:
-    image: jenkins/jenkins:2.433-jdk17
+    build:
+      context: "${WORKSPACE}"
+      dockerfile: "${WORKSPACE}/.platforms/tools/Dockerfile-Jenkins"
     container_name: jenkins
     privileged: true
     user: root
@@ -20,7 +22,7 @@ services:
       - 8080:8080
       - 50000:50000
     volumes:
-      - /opt/workshop/jenkins/jenkins_home:/var/jenkins_home
+      - /var/jenkins_home:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
       - /usr/local/bin/docker:/usr/local/bin/docker
 

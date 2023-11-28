@@ -10,4 +10,4 @@ docker run --rm --name "builder" -w /code ${DOCKER_EXTRA_OPTS} maven:3.8.5-openj
 # dockerRun "${PROJECT_NAME}-mvn-builder" "${WORKDIR}" "${DOCKER_EXTRA_OPTS}" "maven:3.8.5-openjdk-17" "mvn clean package -Dmaven.wagon.http.ssl.insecure=true"
 
 # Fix permission
-sudo chmod 777 -R ${WORKSPACE}/sources/target
+chmod 777 -R ${WORKSPACE}/sources/target
