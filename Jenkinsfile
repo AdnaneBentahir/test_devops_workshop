@@ -41,7 +41,7 @@ node() {
 
         stage("Deploy") {
             println "Deploy project"
-            sh "bash ./.platforms/k8s/deploy.sh ${deployTo}"
+            sh "bash ./.platforms/ci/deploy.sh"
         }
 
         // Notification (Teams, Mattermost, etc)
