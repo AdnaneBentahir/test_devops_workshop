@@ -39,10 +39,10 @@ node() {
             sh "bash ./.platforms/ci/package.sh"
         }
 
-//        stage("Deploy") {
-//            println "Deploy project"
-//            sh "bash ./.platforms/k8s/deploy.sh ${deployTo}"
-//        }
+        stage("Deploy") {
+            println "Deploy project"
+            sh "bash ./.platforms/k8s/deploy.sh ${deployTo}"
+        }
 
         // Notification (Teams, Mattermost, etc)
         println "Déploiement du projet '${projetcName}' réalisé avec succès"
